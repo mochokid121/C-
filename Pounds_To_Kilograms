@@ -1,0 +1,21 @@
+// Converting pounds to kilograms
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	const float POUNDS_PER_KILOGRAM = .4536;		//.4536 pounds in 1 kilogram
+	float pounds, kilo;
+
+	// Get the weight in pounds
+	cout << "Enter your weight in pounds: " << endl;
+	cin >> pounds;
+
+	// Convert weight to kilograms
+	kilo = POUNDS_PER_KILOGRAM * pounds;
+
+	//Display conversion
+	cout << "The weight in kilograms is: " << kilo << endl;
+	return 0;
+}
