@@ -1,0 +1,45 @@
+// Draws a stick figure
+
+#include<iostream>
+using namespace std;
+
+void drawCircle();		// Draws circle
+void drawTriangle();	// Draws triangle
+void drawIntersect();	// Draws intersecting lines
+void drawBase();		// Draws a horizontal line\
+
+int main()
+{
+	drawCircle();
+	drawTriangle();
+	drawIntersect();
+
+	return  0;
+}
+
+void drawCircle()
+{
+	cout << "  *	" << endl;
+	cout << "*   *" << endl;
+	cout << " * *	" << endl;
+	cout << " " << endl;
+}
+
+void drawTriangle()
+{
+	drawIntersect();
+	drawBase();
+}
+
+void drawIntersect()
+{
+	cout << "	/\\	" << endl;
+	cout << "  /  \\ " << endl;
+	cout << " /    \\" << endl;
+	cout << "/      \\" << endl;
+}
+
+void drawBase()
+{
+	cout << "____________" << endl;
+}
