@@ -1,0 +1,57 @@
+// Displaying grades
+
+#include <iostream>
+using namespace std;
+
+void displayGrade(int);
+
+int main()
+{
+	const int SENTINEL = -1;
+	int score;
+	int sum;
+	int average;
+	int count;
+
+	count = 0;
+	sum = 0;
+	cout << "Enter scored one at a time as requested." << endl;
+	cout << "When finished, enter " << SENTINEL << " to stop." << endl;
+	cout << "Enter the first score: ";
+	cin >> score;
+
+	while (score != SENTINEL)
+	{
+		sum += score;
+		count++;
+		displayGrade(score);
+		cout << endl << "Enter the next sore: ";
+		cin >> score;
+	}
+
+	cout << endl << endl;
+	cout << "Number of scored processed is: " << count << endl;
+	cout << "Sum of exam scores are " << sum << endl;
+
+	if (count > 0)
+	{
+		average = sum / count;
+		cout << "The average score is: " << average << endl;
+	}
+
+	return 0;
+}
+
+void displayGrade(int score)
+{
+	if (score >= 90)
+		cout << "Grade is a A" << endl;
+	else if (score >= 80)
+		cout << "Grade is a B" << endl;
+	else if (score >= 70)
+		cout << "Grade is a C" << endl;
+	else if (score >= 60)
+		cout << "Grade is a D" << endl;
+	else
+		cout << "Grade is a F" << endl;
+}
