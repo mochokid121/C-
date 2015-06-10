@@ -1,0 +1,44 @@
+// Entering numbers for the Quadratic Equation
+
+#include <cmath>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	double a, b, c;
+	double discriminant;
+	double root1;
+	double root2;
+
+	// Receiving numbers for variables: a, b, and c
+	cout << "Enter the number for 'a': " << endl;
+	cin >> a;
+	cout << "Enter the number for 'b': " << endl;
+	cin >> b;
+	cout << "Enter the number for 'c': " << endl;
+	cin >> c;
+
+	// Setting the formulas
+	discriminant = pow(b, 2) - 4.0 * a * c;
+	root1 = ((-b + sqrt(discriminant)) / (2.0 * a));
+	root2 = ((-b - sqrt(discriminant)) / (2.0 * a));
+
+	//Output
+	if (discriminant == 0)
+	{
+		cout << "\n\nThe discriminant is: " << discriminant << endl;
+		cout << "The equation has a single root.\n\n";
+	}
+	else if (discriminant < 0)
+	{
+		cout << "\n\nThe discriminant is " << discriminant << endl;
+		cout << "The equation has two complex roots.\n\n";
+	}
+	else
+	{
+		cout << "\n\nThe discriminant is " << discriminant << endl;
+		cout << "The equation has two real roots.\n\n";
+	}
+	return 0;
+}
